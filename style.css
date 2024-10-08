@@ -49,10 +49,8 @@ p {
 
 .grid {
     display: grid;
-    grid-template-columns: 40% 40%;
-    justify-content: center;
-    align-items: start;
-    row-gap: 20px;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
+    gap: 20px; /* space between the columns */
 }
 
 .grid img {
