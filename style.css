@@ -1,116 +1,78 @@
-@import url('https://fonts.googleapis.com/css2?family=Mantinia+Regular:wght@400&display=swap');
-
+/* General Styles */
 body {
-    font-family: 'Mantinia Regular', serif;
-    font-size: 16px;
+    font-family: 'Mantinia Regular', sans-serif;
+    background-color: black; /* Fallback color */
+    color: #fff; /* For contrast against the background */
     margin: 0;
     padding: 0;
 }
 
-.header {
-    background-color: #333;
-}
-
-.navbar {
-    position: fixed;
-    top: -50px;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
-    overflow: hidden;
-    transition: top 0.3s;
-    z-index: 1000;
-}
-
-.navbar a {
-    float: left;
-    display: block;
-    color: #fff;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    transition: background 0.3s;
-}
-
-.navbar a:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.navbar .icon {
-    display: none;
-}
-
-/* Buffer area to trigger hover effect */
-.show-navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    z-index: 1;
-}
-
-.show-navbar:hover + .navbar {
-    top: 0;
-}
-
-main {
-    background-color: #fff;
-    font-size: 18px;
-}
-
-footer {
-    background-color: #222;
-}
-
-h1 {
-    text-align: center;
-    font-family: 'Mantinia Regular', serif;
-    color: #555;
-}
-
-p {
-    line-height: 1.5;
-}
-
-.grid {
+.container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    padding: 20px;
 }
 
-.grid img {
-    width: 100%;
-    border: 2px solid #000;
+img {
+    border: 2px solid #fff;
     padding: 10px;
     border-radius: 10px;
 }
 
-.flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-img {
-    transition: transform 0.3s ease;
-}
-
-img:hover {
-    transform: scale(1.1);
+img:nth-child(even) {
+    border-radius: 20px;
 }
 
 .skip-link {
     position: absolute;
     top: -40px;
     left: -40px;
-    background: #000;
+    background-color: #000;
     color: #fff;
     padding: 8px;
     z-index: 100;
 }
 
 .skip-link:focus {
-    top: 0;
-    left: 0;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: block;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.navbar a:hover {
+    color: #ffcc00;
+    transition: color 0.3s;
+}
+
+/* Ensure the Mantinia Regular font is loaded */
+@font-face {
+    font-family: 'Mantinia Regular';
+    src: url('Mantinia-Regular.woff2') format('woff2'),
+         url('Mantinia-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Ensuring the background image styling */
+body {
+    background-image: url('https://static.wikia.nocookie.net/eldenring/images/7/7a/ER_Godfrey.png/revision/latest?cb=20220204222224');
+    background-size: cover;
+    background-position: center 15%;
+    background-repeat: no-repeat;
 }
