@@ -8,7 +8,12 @@ header {
 }
 
 nav {
-    background-color: #444;
+    display: inline-block;
+    width: 80%;
+}
+
+nav img {
+    width: 10%;
 }
 
 main {
@@ -20,10 +25,13 @@ footer {
     background-color: #222;
 }
 
+/* Commenting out existing li styling */
+/*
 li {
     display: inline-block;
     width: 100px;
 }
+*/
 
 h1 {
     text-align: center;
@@ -33,4 +41,37 @@ h1 {
 
 p {
     line-height: 1.5;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: center;
+    align-items: start;
+    row-gap: 20px;
+}
+
+.grid img {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+    left: 0;
 }
