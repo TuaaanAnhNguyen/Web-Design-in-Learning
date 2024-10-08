@@ -1,19 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Mantinia+Regular:wght@400&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Mantinia Regular', serif;
     font-size: 16px;
+    margin: 0;
+    padding: 0;
 }
 
 header {
     background-color: #333;
 }
 
-nav {
-    display: inline-block;
-    width: 80%;
+.navbar {
+    position: fixed;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    overflow: hidden;
+    transition: top 0.3s;
 }
 
-nav img {
-    width: 10%;
+.navbar a {
+    float: left;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.2); /* Highlight links on hover */
+}
+
+.navbar .icon {
+    display: none;
+}
+
+/* Show the navbar when the user hovers near the top of the screen */
+.show-navbar:hover + .navbar {
+    top: 0;
 }
 
 main {
@@ -33,13 +61,9 @@ li {
 }
 */
 
-li {
-    display: block;
-}
-
 h1 {
     text-align: center;
-    font-family: 'Georgia', serif;
+    font-family: 'Mantinia Regular', serif;
     color: #555;
 }
 
@@ -49,12 +73,15 @@ p {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
-    gap: 20px; /* space between the columns */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns of equal width */
+    gap: 20px;
 }
 
 .grid img {
     width: 100%;
+    border: 2px solid #000; /* Border for the images */
+    padding: 10px; /* Padding for the images */
+    border-radius: 10px; /* Rounded corners for the images */
 }
 
 .flex {
@@ -63,18 +90,25 @@ p {
     justify-content: space-between;
 }
 
+img {
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
 .skip-link {
     position: absolute;
-    top: 10px; /* Adjusted to make sure it's within view */
-    left: 10px;
+    top: -40px;
+    left: -40px;
     background: #000;
     color: #fff;
     padding: 8px;
     z-index: 100;
-    text-decoration: none;
 }
 
 .skip-link:focus {
-    top: 10px;
-    left: 10px;
+    top: 0;
+    left: 0;
 }
