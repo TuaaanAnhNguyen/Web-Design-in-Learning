@@ -41,25 +41,6 @@ img:nth-child(even) {
     display: block;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-around;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 10px;
-}
-
-.navbar a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px;
-}
-
-.navbar a:hover {
-    color: #ffcc00;
-    transition: color 0.3s;
-}
-
 /* Ensure the Mantinia Regular font is loaded */
 @font-face {
     font-family: 'Mantinia Regular';
@@ -75,4 +56,15 @@ body {
     background-size: cover;
     background-position: center 15%;
     background-repeat: no-repeat;
+}
+
+/* Content Box with Semi-Transparent Background */
+.content-box {
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    margin: auto;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
