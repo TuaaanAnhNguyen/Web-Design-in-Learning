@@ -12,21 +12,34 @@
             font-family: 'Mantinia Regular', sans-serif;
             color: #fff;
             background-color: black;
-        }
-
-        .hero {
-            width: 100%;
-            height: 80vh; /* Adjust this value to fit your preference */
             background-image: url('https://static.wikia.nocookie.net/eldenring/images/b/b4/ER_Dragonlord_Placidusax.png/revision/latest/scale-to-width-down/1000?cb=20230629180633');
             background-size: cover;
             background-repeat: no-repeat;
-            background-position: top; /* Adjust position to show the image properly */
+            background-position: top;
         }
 
-        .content {
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        .navbar a:hover {
+            color: #ffcc00;
+            transition: color 0.3s;
+        }
+
+        .content-box {
+            background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
             padding: 20px;
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.8); /* Adding a subtle background color for readability */
             border-radius: 10px;
             max-width: 80%;
             margin: auto;
@@ -36,8 +49,13 @@
     </style>
 </head>
 <body>
-    <div class="hero"></div>
-    <main id="main-content" class="content">
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="Godfrey.html">Godfrey, the First Elden Lord</a>
+        <a href="Bayle.html">Bayle the Dread</a>
+        <a href="Placidusax.html">Dragonlord Placidusax</a>
+    </div>
+    <main id="main-content" class="content-box">
         <h1>Dragonlord Placidusax</h1>
         <blockquote>
             <p>The Dragonlord whose seat lies at the heart of the storm beyond time is said to have been Elden Lord in the age before the Erdtree. Once his god was fled, the lord continued to await its return.</p>
