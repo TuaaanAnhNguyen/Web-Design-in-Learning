@@ -22,6 +22,16 @@
             margin-top: 20px;
         }
 
+        #image {
+            height: 300px;
+            line-height: 300px;
+            text-align: center;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            background-color: #f3f3f3;
+            color: black;
+        }
+
         .gallery {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -37,8 +47,9 @@
         }
     </style>
 </head>
-<body>
+<body onload="addTabFocus();">
     <h1>Gallery</h1>
+    <div id="image">Hover over an image below to display here.</div>
     <div class="gallery">
         <img src="https://raw.githubusercontent.com/TuaaanAnhNguyen/Web-Design-in-Learning/main/ER_Godfrey.png" alt="Godfrey" onmouseover="upDate(this);" onmouseout="undo();" onfocus="upDate(this);" onblur="undo();">
         <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/bayle_the_dread_bosses_elden_ring_wiki_1200px.png" alt="Bayle" onmouseover="upDate(this);" onmouseout="undo();" onfocus="upDate(this);" onblur="undo();">
