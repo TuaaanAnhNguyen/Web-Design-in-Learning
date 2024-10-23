@@ -1,6 +1,6 @@
 function upDate(previewPic) {
     // Display an initial log to ensure event is triggered
-    console.log("Mouseover event triggered");
+    console.log("Mouseover or focus event triggered");
 
     // Log the alt and source attributes of the previewPic
     console.log("Alt text: " + previewPic.alt);
@@ -20,3 +20,19 @@ function undo() {
     // Reset the text
     document.getElementById("image").innerHTML = "Hover over an image below to display here.";
 }
+
+function addTabFocus() {
+    // Display an initial log to ensure event is triggered
+    console.log("Page loaded - setting tabindex");
+
+    // Get all the images in the gallery
+    var images = document.querySelectorAll(".gallery img");
+
+    // Loop through each image and add tabindex attributes
+    images.forEach(function(img, index) {
+        img.setAttribute("tabindex", "0");
+    });
+}
+
+// Ensure the function runs when the page is fully loaded
+window.onload = addTabFocus;
