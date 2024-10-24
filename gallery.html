@@ -22,45 +22,58 @@
             margin-top: 20px;
         }
 
-        #image {
-            height: 300px;
-            line-height: 300px;
-            text-align: center;
-            border: 1px solid #ddd;
-            margin-bottom: 20px;
-            background-color: #f3f3f3;
-            color: black;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+        .container {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
             padding: 20px;
         }
 
-        .gallery img {
-            width: 100px;
-            height: 100px;
+        #image {
+            flex: 1;
+            height: 500px;
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-right: 20px;
             border: 2px solid #fff;
             border-radius: 10px;
+        }
+
+        .gallery {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 150px;
+            height: 150px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body onload="addTabFocus();">
     <h1>Gallery</h1>
-    <div id="image">Hover over an image below to display here.</div>
-    <div class="gallery">
-        <img src="https://raw.githubusercontent.com/TuaaanAnhNguyen/Web-Design-in-Learning/main/ER_Godfrey.png" alt="Godfrey" onmouseover="upDate(this);" onmouseout="undo();" onfocus="upDate(this);" onblur="undo();">
-        <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/bayle_the_dread_bosses_elden_ring_wiki_1200px.png" alt="Bayle" onmouseover="upDate(this);" onmouseout="undo();" onfocus="upDate(this);" onblur="undo();">
-        <img src="https://raw.githubusercontent.com/TuaaanAnhNguyen/Web-Design-in-Learning/main/placidusax.png" alt="Placidusax" onmouseover="upDate(this);" onmouseout="undo();" onfocus="upDate(this);" onblur="undo();">
-        <img src="https://github.com/TuaaanAnhNguyen/Web-Design-in-Learning/blob/main/Mohg.png?raw=true" alt="Mohg, Lord of Blood" onmouseover="upDate(this);" onmouseout="undo();" onfocus="upDate(this);" onblur="undo();">
-        <img src="https://github.com/TuaaanAnhNguyen/Web-Design-in-Learning/blob/main/Midra.png?raw=true" alt="Midra, Lord of Frenzied Flame" onmouseover="upDate(this);" onmouseout="undo();" onfocus="upDate(this);" onblur="undo();">
-        <img src="https://github.com/TuaaanAnhNguyen/Web-Design-in-Learning/blob/main/Crucible%20Knight%20Devonia.png?raw=true" alt="Crucible Knight Devonia, the longest serving knight" onmouseover="upDate(this);" onmouseout="undo();" onfocus="upDate(this);" onblur="undo();">
-        <img src="https://github.com/TuaaanAnhNguyen/Web-Design-in-Learning/blob/main/Ghostflame%20Dragon.png?raw=true" alt="Ghostflame Dragon" onmouseover="upDate(this);" onmouseout="undo();" onfocus="upDate(this);" onblur="undo();">
-        <img src="https://github.com/TuaaanAnhNguyen/Web-Design-in-Learning/blob/main/Divine%20Beast%20Dancing%20Lion.png?raw=true" alt="Divine Beast Dancing Lion" onmouseover="upDate(this);" onmouseout="undo();" onfocus="upDate(this);" onblur="undo();">
-        <img src="https://github.com/TuaaanAnhNguyen/Web-Design-in-Learning/blob/main/Regal%20Ancestral%20Spirit.png?raw=true" alt="Regal Ancestor Spirit" onmouseover="upDate(this);" onmouseout="undo();" onfocus="upDate(this);" onblur="undo();">
-        <img src="https://github.com/TuaaanAnhNguyen/Web-Design-in-Learning/blob/main/Rellana.png?raw=true" alt="Rellana, Twin Moon Knight" onmouseover="upDate(this);" onmouseout="undo();" onfocus="upDate(this);" onblur="undo();">
+    <div class="container">
+        <div id="image">Hover over an image below to display here.</div>
+        <div class="gallery">
+            <img src="https://raw.githubusercontent.com/TuaaanAnhNguyen/Web-Design-in-Learning/main/ER_Godfrey.png" alt="Godfrey" onmouseover="upDate(this);" onmouseout="undo();" onfocus="upDate(this);" onblur="undo();">
+            <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/bayle_the_dread_bosses_elden_ring_wiki_1200px.png" alt="Bayle" onmouseover="upDate(this);" onmouseout="undo();" onfocus="upDate(this);" onblur="undo();">
+            <img src="https://raw.githubusercontent.com/TuaaanAnhNguyen/Web-Design-in-Learning/main/placidusax.png" alt="Placidusax" onmouseover="upDate(this);" onmouseout="undo();" onfocus="upDate(this);" onblur="undo();">
+            <img src="https://github.com/TuaaanAnhNguyen/Web-Design-in-Learning/blob/main/Mohg.png?raw=true" alt="Mohg, Lord of Blood" onmouseover="upDate(this);" onmouseout="undo();" onfocus="upDate(this);" onblur="undo();">
+            <img src="https://github.com/TuaaanAnhNguyen/Web-Design-in-Learning/blob/main/Midra.png?raw=true" alt="Midra, Lord of Frenzied Flame" onmouseover="upDate(this);" onmouseout="undo();" onfocus="upDate(this);" onblur="undo();">
+            <img src="https://github.com/TuaaanAnhNguyen/Web-Design-in-Learning/blob/main/Crucible%20Knight%20Devonia.png?raw=true" alt="Crucible Knight Devonia, the longest serving knight" onmouseover="upDate(this);" onmouseout="undo();" onfocus="upDate(this);" onblur="undo();">
+            <img src="https://github.com/TuaaanAnhNguyen/Web-Design-in-Learning/blob/main/Ghostflame%20Dragon.png?raw=true" alt="Ghostflame Dragon" onmouseover="upDate(this);" onmouseout="undo();" onfocus="upDate(this);" onblur="undo();">
+            <img src="https://github.com/TuaaanAnhNguyen/Web-Design-in-Learning/blob/main/Divine%20Beast%20Dancing%20Lion.png?raw=true" alt="Divine Beast Dancing Lion" onmouseover="upDate(this);" onmouseout="undo();" onfocus="upDate(this);" onblur="undo();">
+            <img src="https://github.com/TuaaanAnhNguyen/Web-Design-in-Learning/blob/main/Regal%20Ancestral%20Spirit.png?raw=true" alt="Regal Ancestor Spirit" onmouseover="upDate(this);" onmouseout="undo();" onfocus="upDate(this);" onblur="undo();">
+            <img src="https://github.com/TuaaanAnhNguyen/Web-Design-in-Learning/blob/main/Rellana.png?raw=true" alt="Rellana, Twin Moon Knight" onmouseover="upDate(this);" onmouseout="undo();" onfocus="upDate(this);" onblur="undo();">
+        </div>
     </div>
 </body>
 </html>
