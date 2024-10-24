@@ -1,15 +1,42 @@
 body {
     font-family: 'Mantinia Regular', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111; /* Darker background to enhance image focus */
+    color: white; /* Text color */
 }
 
 /* Image container styling */
 #image {
-    height: 300px;
-    line-height: 300px;
-    text-align: center;
+    height: calc(100vh - 40px); /* Make the image container fill the viewport height */
+    background-color: #333;
     border: 1px solid #ddd;
     margin-bottom: 10px;
-    background-color: #f3f3f3; 
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#image img {
+    max-width: 100%; /* Ensure image fits within container's width */
+    max-height: 100%; /* Ensure image fits within container's height */
+    object-fit: contain; /* Maintain aspect ratio */
+    border: none;
+}
+
+/* Display caption text over the image */
+#image div {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 /* Gallery styling */
@@ -19,41 +46,43 @@ body {
     margin: 5px;
     border: 1px solid #ddd;
     cursor: pointer;
+    border-radius: 8px;
+    object-fit: cover; /* Ensure thumbnails are neatly cropped */
+    transition: border 0.3s ease;
 }
 
 .gallery img:hover {
-    border: 1px solid #666;
+    border: 2px solid #666;
 }
 
-/* Grid styling */
+/* Layout grid for larger image and gallery */
 .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; 
-    grid-template-rows: auto 1fr;
+    grid-template-columns: 3fr 1fr; /* Larger area for main image, smaller for gallery */
     gap: 20px;
+    padding: 20px;
     justify-content: center;
     align-items: start;
 }
 
-.grid .godfrey {
-    grid-column: 1 / 2; 
-    grid-row: 1 / 3; 
+.grid #image {
+    grid-column: 1 / 2; /* Main image takes first column */
 }
 
-.grid .bayle {
-    grid-column: 2 / 3; 
-    grid-row: 1 / 2; 
-}
-
-.grid .placidusax {
-    grid-column: 2 / 3; 
-    grid-row: 2 / 3;
+.grid .gallery {
+    grid-column: 2 / 3; /* Gallery takes second column */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    overflow-y: auto;
+    height: calc(100vh - 40px); /* Allow the gallery to scroll if needed */
+    padding: 10px;
 }
 
 .grid img {
     max-width: 100%;
     height: auto;
-    border: 2px solid #fff;
     padding: 10px;
     border-radius: 10px;
 }
@@ -62,6 +91,7 @@ body {
     margin-top: 10px;
 }
 
+/* Styling for the bottom image (optional) */
 .bottom-image {
     width: 80%;
     height: 80px; 
@@ -69,6 +99,7 @@ body {
     margin-top: 20px;
 }
 
+/* Optional styling for ending text */
 .end-text {
     font-size: 24px;
     margin-top: 20px;
