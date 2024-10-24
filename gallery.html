@@ -14,39 +14,43 @@
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            flex-direction: row; 
         }
 
         h1 {
             margin-top: 20px;
+            text-align: center;
+            width: 100%;
         }
 
         .container {
             display: flex;
             width: 100%;
             justify-content: space-between;
-            padding: 20px;
         }
 
         #image {
-            flex: 1;
-            height: 500px;
+            flex: 3;
+            height: calc(100vh - 40px); /* make it fit the screen height */
             background-color: #333;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            margin-right: 20px;
             border: 2px solid #fff;
             border-radius: 10px;
+            background-size: contain; /* automatically resize the image */
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         .gallery {
-            flex: 1;
+            flex: 1; 
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(1, 1fr); 
             gap: 20px;
+            padding: 20px;
+            overflow-y: auto; 
         }
 
         .gallery img {
@@ -55,6 +59,11 @@
             border: 2px solid #fff;
             border-radius: 10px;
             cursor: pointer;
+        }
+
+       
+        #image {
+            transition: background-image 0.5s ease-in-out;
         }
     </style>
 </head>
@@ -68,11 +77,7 @@
             <img src="https://raw.githubusercontent.com/TuaaanAnhNguyen/Web-Design-in-Learning/main/placidusax.png" alt="Placidusax" onmouseover="upDate(this);" onmouseout="undo();" onfocus="upDate(this);" onblur="undo();">
             <img src="https://github.com/TuaaanAnhNguyen/Web-Design-in-Learning/blob/main/Mohg.png?raw=true" alt="Mohg, Lord of Blood" onmouseover="upDate(this);" onmouseout="undo();" onfocus="upDate(this);" onblur="undo();">
             <img src="https://github.com/TuaaanAnhNguyen/Web-Design-in-Learning/blob/main/Midra.png?raw=true" alt="Midra, Lord of Frenzied Flame" onmouseover="upDate(this);" onmouseout="undo();" onfocus="upDate(this);" onblur="undo();">
-            <img src="https://github.com/TuaaanAnhNguyen/Web-Design-in-Learning/blob/main/Crucible%20Knight%20Devonia.png?raw=true" alt="Crucible Knight Devonia, the longest serving knight" onmouseover="upDate(this);" onmouseout="undo();" onfocus="upDate(this);" onblur="undo();">
-            <img src="https://github.com/TuaaanAnhNguyen/Web-Design-in-Learning/blob/main/Ghostflame%20Dragon.png?raw=true" alt="Ghostflame Dragon" onmouseover="upDate(this);" onmouseout="undo();" onfocus="upDate(this);" onblur="undo();">
-            <img src="https://github.com/TuaaanAnhNguyen/Web-Design-in-Learning/blob/main/Divine%20Beast%20Dancing%20Lion.png?raw=true" alt="Divine Beast Dancing Lion" onmouseover="upDate(this);" onmouseout="undo();" onfocus="upDate(this);" onblur="undo();">
-            <img src="https://github.com/TuaaanAnhNguyen/Web-Design-in-Learning/blob/main/Regal%20Ancestral%20Spirit.png?raw=true" alt="Regal Ancestor Spirit" onmouseover="upDate(this);" onmouseout="undo();" onfocus="upDate(this);" onblur="undo();">
-            <img src="https://github.com/TuaaanAnhNguyen/Web-Design-in-Learning/blob/main/Rellana.png?raw=true" alt="Rellana, Twin Moon Knight" onmouseover="upDate(this);" onmouseout="undo();" onfocus="upDate(this);" onblur="undo();">
+            <img src="https://github.com/TuaaanAnhNguyen/Web-Design-in-Learning/blob/main/Crucible%20Knight%20Devonia.png?raw=true" alt="Crucible Knight Devonia" onmouseover="upDate(this);" onmouseout="undo();" onfocus="upDate(this);" onblur="undo();">
         </div>
     </div>
 </body>
