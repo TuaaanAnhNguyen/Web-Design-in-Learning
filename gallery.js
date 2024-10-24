@@ -1,21 +1,15 @@
 function upDate(previewPic) {
     console.log("Mouseover or focus event triggered");
-
     const imageContainer = document.getElementById("image");
-
     // Clear any existing content
     imageContainer.innerHTML = "";
-
     // Create a new img element
     const img = document.createElement("img");
-
     // Set the src and alt attributes from the preview image
     img.src = previewPic.src;
     img.alt = previewPic.alt;
-
     // Insert the img element into the image container
     imageContainer.appendChild(img);
-
     // Optionally display alt text as caption (can be styled further)
     const caption = document.createElement("div");
     caption.innerHTML = previewPic.alt;
@@ -25,13 +19,11 @@ function upDate(previewPic) {
     caption.style.color = "white";
     caption.style.fontSize = "16px";
     imageContainer.appendChild(caption);
-
     // Ensure the image maintains its original size
     img.onload = function() {
         const naturalWidth = img.naturalWidth;
         const naturalHeight = img.naturalHeight;
         const aspectRatio = naturalWidth / naturalHeight;
-
         // Dynamically adjust the container to fit the image
         if (aspectRatio > 1) { // landscape image
             img.style.width = "100%";
@@ -51,14 +43,27 @@ function undo() {
 
 function addTabFocus() {
     console.log("Page loaded - setting tabindex");
-
     // Get all the images in the gallery
     var images = document.querySelectorAll(".gallery img");
-
     // Loop through each image and add tabindex attributes
     images.forEach(function(img) {
         img.setAttribute("tabindex", "0");
     });
 }
 
-window.onload = addTabFocus;
+// Add event listeners for hover to dynamically change the main image
+window.onload = function() {
+    addTabFocus();
+
+    const thumbnails = document.querySelectorAll('.gallery img');
+    const mainImage = document.querySelector('#image img');
+
+    thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('mouseover', function() {
+            upDate(thumbnail);
+        });
+        thumbnail.addEventListener('focus', function() {
+            upDate(thumbnail);
+        });
+    });
+};
