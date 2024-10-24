@@ -22,17 +22,15 @@ function undo() {
 }
 
 function addTabFocus() {
-    // Display an initial log to ensure event is triggered
     console.log("Page loaded - setting tabindex");
 
     // Get all the images in the gallery
     var images = document.querySelectorAll(".gallery img");
 
     // Loop through each image and add tabindex attributes
-    images.forEach(function(img, index) {
+    images.forEach(function(img) {
         img.setAttribute("tabindex", "0");
     });
 }
 
-// Ensure the function runs when the page is fully loaded
 window.onload = addTabFocus;
