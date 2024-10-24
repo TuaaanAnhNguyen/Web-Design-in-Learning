@@ -25,6 +25,22 @@ function upDate(previewPic) {
     caption.style.color = "white";
     caption.style.fontSize = "16px";
     imageContainer.appendChild(caption);
+
+    // Ensure the image maintains its original size
+    img.onload = function() {
+        const naturalWidth = img.naturalWidth;
+        const naturalHeight = img.naturalHeight;
+        const aspectRatio = naturalWidth / naturalHeight;
+
+        // Dynamically adjust the container to fit the image
+        if (aspectRatio > 1) { // landscape image
+            img.style.width = "100%";
+            img.style.height = "auto";
+        } else { // portrait image
+            img.style.height = "100%";
+            img.style.width = "auto";
+        }
+    };
 }
 
 function undo() {
