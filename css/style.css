@@ -25,8 +25,7 @@ li {
 }
 
 img {
-    border: 5px solid blue;
-    width: 100%;
+    width: 100%; 
 }
 
 .label {
@@ -38,15 +37,13 @@ img {
 .grid {
     display: grid;
     grid-template-columns: 1fr; 
-    gap: 10px; 
+    gap: 10px;
 }
 
 figure {
     margin: 0;
     padding: 0;
     text-align: center;
-    border: 5px solid blue;
-    border-radius: 35px; 
     background-color: #f9f9f9;
 }
 
@@ -55,7 +52,7 @@ figure {
     .grid {
         grid-template-columns: 1fr 1fr; 
     }
-
+    
     figure {
         border-radius: 50%; 
     }
@@ -75,7 +72,7 @@ figure {
         border-radius: 0; 
     }
 
-    figure:nth-child(3n) {
+    figure:nth-child(3n+3) {
         grid-column: span 2; 
     }
 }
@@ -98,6 +95,6 @@ figure {
     figure {
         background-color: #333; 
         color: #ffeb3b; 
-        border: 1px solid #000; 
+        border: 1px solid #333; 
     }
 }
