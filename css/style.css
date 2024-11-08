@@ -39,7 +39,36 @@ div {
 }
 
 
+@media (min-width: 772px) {
+  div {
+    width: 45%; 
+  }
 
+  div img {
+    max-height: 30vh; 
+  }
+
+
+  body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+
+@media (min-width: 998px) {
+  div {
+    width: 30%; 
+  }
+
+
+  body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 
 
 
