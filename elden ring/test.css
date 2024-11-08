@@ -1,0 +1,24 @@
+body {
+    font-family: 'Mantinia Regular', sans-serif;
+}
+
+#image {
+    height: 300px;
+    line-height: 300px; 
+    text-align: center;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    background-color: #f3f3f3; 
+}
+
+.gallery img {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    border: 1px solid #666;
+}
