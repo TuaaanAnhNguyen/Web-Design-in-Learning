@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="gallery.js" defer></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Mantinia Regular', sans-serif;
+            color: #fff;
+            background-color: black;
+        }
+
+        .hero {
+            width: 100%;
+            height: 80vh;
+            background-image: url('https://image.api.playstation.com/vulcan/ap/rnd/202107/0902/A7nZdVLWTZmM1XWhZCzEu10U.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        .navbar a:hover {
+            color: #ffcc00;
+            transition: color 0.3s;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero"></div>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="Godfrey.html">Godfrey, the First Elden Lord</a>
+        <a href="Bayle.html">Bayle the Dread</a>
+        <a href="Placidusax.html">Dragonlord Placidusax</a>
+        <a href="gallery.html">Gallery</a>
+    </div>
+    <a href="#main-content" class="skip-link">Skip to Main Content</a>
+    <main id="main-content" class="content">
+        <h1>Main Menu</h1>
+        <div class="grid">
+            <div class="godfrey">
+                <img src="https://raw.githubusercontent.com/TuaaanAnhNguyen/Web-Design-in-Learning/main/ER_Godfrey.png" alt="Godfrey">
+                <p><a href="Godfrey.html">Godfrey, the First Elden Lord</a></p>
+            </div>
+            <div class="bayle">
+                <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/bayle_the_dread_bosses_elden_ring_wiki_1200px.png" alt="Bayle">
+                <p><a href="Bayle.html">Bayle the Dread</a></p>
+            </div>
+            <div class="placidusax">
+                <img src="https://raw.githubusercontent.com/TuaaanAnhNguyen/Web-Design-in-Learning/main/placidusax.png" alt="Placidusax">
+                <p><a href="Placidusax.html">Dragonlord Placidusax</a></p>
+            </div>
+        </div>
+        <img src="https://cdnb.artstation.com/p/assets/images/images/049/906/117/large/heaven-ascended-nwah-elden-ring-logo.jpg?1653585876" alt="Elden Ring Logo" class="bottom-image">
+        <div class="end-text">End of Page</div>
+    </main>
+</body>
+</html>
